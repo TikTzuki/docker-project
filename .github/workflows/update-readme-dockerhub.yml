@@ -1,0 +1,14 @@
+name: Docker Hub description
+on: [push]
+jobs:
+  docker-readme:
+    runs-on: Ubuntu-20.04
+    steps:
+      - name: check out the repo
+        uses: actions/checkout@v2
+      - name: docker-readme
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username : tiktzuki 
+          password :  Ld201199- 
+          repository : tiktzuki/mysql
